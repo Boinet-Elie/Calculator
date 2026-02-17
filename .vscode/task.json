@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "maui: Build",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["build"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$msCompile",
+      "group": "build"
+    },
+    {
+      "label": "maui: Run MacCatalyst",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["build", "-t:Run", "-f", "net10.0-maccatalyst"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "maui: Run iOS Simulator",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["build", "-t:Run", "-f", "net10.0-ios"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}
+ 

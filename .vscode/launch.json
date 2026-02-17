@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MAUI (MacCatalyst) - Run & Attach",
+      "type": "coreclr",
+      "request": "attach",
+      "preLaunchTask": "maui: Run MacCatalyst",
+      "processId": "${command:pickProcess}",
+      "justMyCode": true
+    },
+    {
+      "name": "MAUI (iOS Simulator) - Run & Attach",
+      "type": "coreclr",
+      "request": "attach",
+      "preLaunchTask": "maui: Run iOS Simulator",
+      "processId": "${command:pickProcess}",
+      "justMyCode": true
+    }
+  ]
+}
+ 

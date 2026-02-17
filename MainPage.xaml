@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonAppMaui.MainPage"
+             BackgroundColor="#0F1419"
+             Padding="16">
+
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Grille des boutons -->
+        <Grid Grid.Row="1" ColumnSpacing="10" RowSpacing="10" Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="56"/>
+                <RowDefinition Height="56"/>
+                <RowDefinition Height="56"/>
+                <RowDefinition Height="56"/>
+                <RowDefinition Height="56"/>
+                <RowDefinition Height="56"/>
+                <RowDefinition Height="56"/>
+            </Grid.RowDefinitions>
+
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="FontSize" Value="26"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="BackgroundColor" Value="#1A1F26"/>
+                    <Setter Property="TextColor" Value="#FFFFFF"/>
+                    <Setter Property="CornerRadius" Value="16"/>
+                    <Setter Property="BorderColor" Value="#2D3748"/>
+                    <Setter Property="BorderWidth" Value="2"/>
+                </Style>
+
+                <Style x:Key="OperatorStyle" TargetType="Button">
+                    <Setter Property="FontSize" Value="26"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="BackgroundColor" Value="#FF6F59"/>
+                    <Setter Property="TextColor" Value="White"/>
+                    <Setter Property="CornerRadius" Value="16"/>
+                    <Setter Property="BorderColor" Value="#FF8A75"/>
+                    <Setter Property="BorderWidth" Value="2"/>
+                </Style>
+                
+                <Style x:Key="EqualsStyle" TargetType="Button">
+                    <Setter Property="FontSize" Value="26"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="BackgroundColor" Value="#43AA8B"/>
+                    <Setter Property="TextColor" Value="White"/>
+                    <Setter Property="CornerRadius" Value="16"/>
+                    <Setter Property="BorderColor" Value="#5DD4B4"/>
+                    <Setter Property="BorderWidth" Value="2"/>
+                </Style>
+                
+                <Style x:Key="ClearStyle" TargetType="Button">
+                    <Setter Property="FontSize" Value="26"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="BackgroundColor" Value="#EF3054"/>
+                    <Setter Property="TextColor" Value="White"/>
+                    <Setter Property="CornerRadius" Value="16"/>
+                    <Setter Property="BorderColor" Value="#FF5577"/>
+                    <Setter Property="BorderWidth" Value="2"/>
+                </Style>
+            </Grid.Resources>
+
+            <!-- Écran d'affichage -->
+            <Border Grid.Row="0" Grid.ColumnSpan="4" Stroke="#FF6F59" StrokeShape="RoundRectangle 16,16,16,16" Padding="12" BackgroundColor="#1A1F26" StrokeThickness="3" Margin="0,0,0,4">
+                <Editor x:Name="TB_Display" FontSize="40" FontAttributes="Bold" BackgroundColor="#1A1F26" TextColor="#FF6F59" IsReadOnly="True" IsEnabled="False" VerticalTextAlignment="End" HorizontalTextAlignment="End"/>
+            </Border>
+
+            <!-- Boutons trigonométriques -->
+            <Button Grid.Row="1" Grid.Column="0" x:Name="Btn_Sin" Text="sin" Clicked="BTN_Sin_Click"/>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="Btn_Tan" Text="tan" Clicked="BTN_Tan_Click"/>
+            <Button Grid.Row="1" Grid.Column="2" x:Name="Btn_Cos" Text="cos" Clicked="BTN_Cos_Click"/>
+            <Button Grid.Row="1" Grid.Column="3" x:Name="Btn_Percent" Style="{StaticResource OperatorStyle}" Text="%" Clicked="BTN_Percent_Click"/>
+            
+            <!-- Ligne 1: 1 2 3 + -->
+            <Button Grid.Row="2" Grid.Column="0" x:Name="Btn_1" Text="1" Clicked="BTN_1_Click"/>
+            <Button Grid.Row="2" Grid.Column="1" x:Name="Btn_2" Text="2" Clicked="BTN_2_Click"/>
+            <Button Grid.Row="2" Grid.Column="2" x:Name="Btn_3" Text="3" Clicked="BTN_3_Click"/>
+            <Button Grid.Row="2" Grid.Column="3" x:Name="Btn_Plus" Style="{StaticResource OperatorStyle}" Text="+" Clicked="BTN_plus_Click"/>
+
+            <!-- Ligne 2: 4 5 6 - -->
+            <Button Grid.Row="3" Grid.Column="0" x:Name="Btn_4" Text="4" Clicked="BTN_4_Click"/>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="Btn_5" Text="5" Clicked="BTN_5_Click"/>
+            <Button Grid.Row="3" Grid.Column="2" x:Name="Btn_6" Text="6" Clicked="BTN_6_Click"/>
+            <Button Grid.Row="3" Grid.Column="3" x:Name="Btn_Minus" Style="{StaticResource OperatorStyle}" Text="-" Clicked="BTN_minus_Click"/>
+
+            <!-- Ligne 3: 7 8 9 * -->
+            <Button Grid.Row="4" Grid.Column="0" x:Name="Btn_7" Text="7" Clicked="BTN_7_Click"/>
+            <Button Grid.Row="4" Grid.Column="1" x:Name="Btn_8" Text="8" Clicked="BTN_8_Click"/>
+            <Button Grid.Row="4" Grid.Column="2" x:Name="Btn_9" Text="9" Clicked="BTN_9_Click"/>
+            <Button Grid.Row="4" Grid.Column="3" x:Name="Btn_Multiply" Style="{StaticResource OperatorStyle}" Text="×" Clicked="BTN_multiply_Click"/>
+
+            <!-- Ligne 4: 0 . C / -->
+            <Button Grid.Row="5" Grid.Column="0" x:Name="Btn_0" Text="0" Clicked="BTN_0_Click" FontSize="28"/>
+            <Button Grid.Row="5" Grid.Column="1" x:Name="Btn_Point" Text="." Clicked="BTN_point_Click" FontSize="36"/>
+            <Button Grid.Row="5" Grid.Column="2" x:Name="Btn_Clear" Style="{StaticResource ClearStyle}" Text="C" Clicked="BTN_CLR_Click"/>
+            <Button Grid.Row="5" Grid.Column="3" x:Name="Btn_Divide" Style="{StaticResource OperatorStyle}" Text="÷" Clicked="BTN_divide_Click"/>
+            
+            <!-- Ligne 5: √ = = = -->
+            <Button Grid.Row="6" Grid.Column="0" x:Name="Btn_Sqrt" Style="{StaticResource EqualsStyle}" Text="√" Clicked="BTN_Sqrt_Click"/>
+            <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" x:Name="Btn_Equals" Style="{StaticResource EqualsStyle}" Text="=" Clicked="BTN_equals_Click"/>
+        </Grid>
+
+        <!-- Historique -->
+        <Border Grid.Row="2" Stroke="#FF6F59" StrokeShape="RoundRectangle 16,16,16,16" Padding="12" BackgroundColor="#1A1F26" StrokeThickness="2" Margin="0,0,0,0">
+            <StackLayout Spacing="8">
+                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                    <Label Grid.Column="0" Text="Historique" FontSize="16" FontAttributes="Bold" TextColor="#FF6F59" VerticalOptions="Center"/>
+                    <Button Grid.Column="1" x:Name="Btn_ClearHistory" Text="×" Clicked="BTN_ClearHistory_Click" BackgroundColor="#EF3054" TextColor="White" CornerRadius="12" Padding="0" FontSize="20" WidthRequest="36" HeightRequest="36" BorderColor="#FF5577" BorderWidth="1"/>
+                </Grid>
+                <CollectionView x:Name="HistoryCollectionView" SelectionMode="Single" MaximumHeightRequest="140">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding .}" FontSize="13" TextColor="#ADBAC7" Padding="8" FontFamily="Courier"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Border>
+    </Grid>
+
+</ContentPage>
