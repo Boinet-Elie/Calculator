@@ -80,7 +80,7 @@
 
             <!-- Écran d'affichage -->
             <Border Grid.Row="0" Grid.ColumnSpan="4" Stroke="#FF6F59" StrokeShape="RoundRectangle 16,16,16,16" Padding="12" BackgroundColor="#1A1F26" StrokeThickness="3" Margin="0,0,0,4">
-                <Editor x:Name="TB_Display" FontSize="40" FontAttributes="Bold" BackgroundColor="#1A1F26" TextColor="#FF6F59" IsReadOnly="True" IsEnabled="False" VerticalTextAlignment="End" HorizontalTextAlignment="End"/>
+                <Editor x:Name="TB_Display" FontSize="40" FontAttributes="Bold" BackgroundColor="#1A1F26" TextColor="white" IsReadOnly="True" IsEnabled="False" VerticalTextAlignment="End" HorizontalTextAlignment="End"/>
             </Border>
 
             <!-- Boutons trigonométriques -->
