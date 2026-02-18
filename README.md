@@ -2,6 +2,8 @@
 
 Une application calculatrice moderne et élégante développée avec **.NET MAUI**, offrant une interface utilisateur intuitive avec support complet des opérations mathématiques avancées.
 
+![Texte alternatif](./img/img1.png)
+
 ## 🎯 Caractéristiques
 
 ### Opérations Basiques
