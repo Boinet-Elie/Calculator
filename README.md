@@ -154,25 +154,3 @@ Les fonctions sin, tan, cos acceptent les entrées en degrés et les convertisse
 | sin(90) = | 1 |
 | 50 % = | 0.5 |
 | 10.5 + 5.25 = | 15.75 |
-
-## 🎓 Apprentissages & Bonnes Pratiques
-
-- **State Management** : Utilisation de variables pour gérer l'état du calcul
-- **Data Binding** : ObservableCollection pour mise à jour automatique de l'UI
-- **Event Handling** : Gestionnaires d'événements Click pour chaque bouton
-- **Formatting** : Utilisation de formats de culture pour affichage cohérent
-- **Responsive Design** : Layout fluide s'adaptant à l'espace disponible
-
-## 📄 Licence
-
-Ce projet est fourni à titre d'exemple et à des fins d'apprentissage.
-
-## 👨‍💻 Auteur
-
-Développé avec MAUI et .NET pendant une session de développement interactif.
-
----
-
-**Version** : 1.0  
-**Date** : Février 2026  
-**État** : Production Ready ✅
